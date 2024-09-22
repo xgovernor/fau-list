@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { ReportFormModal } from "@/components/report-form-modal";
 
 export default function RootLayout({
   children,
@@ -7,10 +8,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Header />
       {children}
       <Footer />
+      <ReportFormModal />
     </div>
   );
 }

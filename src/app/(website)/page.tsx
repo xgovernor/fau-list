@@ -12,6 +12,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ThumbsDownIcon, StarIcon, AlertTriangleIcon, SearchIcon, UsersIcon, FilterIcon, MoreVertical } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // Mock data for demonstration
 const companies = [
@@ -172,8 +173,11 @@ export default function Layout() {
                   </CardHeader>
 
                   <CardContent className="flex flex-col items-center pb-10">
-                    <Image className="w-24 h-24 mb-3 rounded-full shadow-lg" src={company.logo} width={96} height={96} alt={`${company.name} logo`} />
-                    <h5 className="mb-1 text-base font-semibold text-gray-900">{company.name}</h5>
+                    <Link href={`/companies/${company.id}`}>
+                      <Image className="w-24 h-24 mb-3 rounded-full shadow-lg" src={company.logo} width={96} height={96} alt={`${company.name} logo`} />
+                    </Link>
+                    <h5 className="mb-1 text-base font-semibold text-gray-900">
+                      <Link href={`/companies/${company.id}`}>{company.name}</Link></h5>
                     <span className="text-xs text-center text-gray-500">{company.description}</span>
                     <div className="flex mt-4 space-x-3">
                       <TooltipProvider>

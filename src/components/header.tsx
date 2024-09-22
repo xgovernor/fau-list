@@ -24,6 +24,7 @@ import { MenuIcon, Moon, Sun, Github, Globe } from 'lucide-react'
 const navItems = [
     // { href: '/', label: 'Home' },
     // { href: '/about', label: 'About' },
+    { href: '/companies', label: 'Companies' },
     { href: '/report', label: 'Report a Company' },
     { href: '/resources', label: 'Resources' },
 ]
